@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="372.0" prefWidth="338.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab1_2.Crypt_Controller">
+  <children>
+    <MenuBar prefHeight="17.0" prefWidth="338.0" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem fx:id="open" mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="307.0" prefWidth="338.0" VBox.vgrow="ALWAYS">
+      <children>
+            <TabPane layoutX="-1.0" prefHeight="375.0" prefWidth="338.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="Crypt_Change" text="Шифрування">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="248.0" prefWidth="338.0">
+                           <children>
+                              <Button fx:id="Crypt_Button" layoutX="122.0" layoutY="241.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="95.0" style="-fx-background-color: red;" text="Зашифрувати" textFill="WHITE" />
+                              <CheckBox fx:id="Zesar" layoutX="96.0" layoutY="199.0" mnemonicParsing="false" text="Цезарь" />
+                              <CheckBox fx:id="Vizener" layoutX="178.0" layoutY="199.0" mnemonicParsing="false" text="Віженер" />
+                              <TextField fx:id="Key" alignment="CENTER" layoutX="96.0" layoutY="161.0" promptText="Ключ шифрування" />
+                              <TextArea fx:id="Crypt" layoutX="43.0" layoutY="11.0" prefHeight="141.0" prefWidth="254.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="Decrypt_Change" text="Розшифрування">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="Decrypt_Button" layoutX="120.0" layoutY="92.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="98.0" style="-fx-background-color: green;" text="Розшифрувати" textFill="WHITE" />
+                              <TextField fx:id="Decrypt_Key" alignment="CENTER" layoutX="95.0" layoutY="49.0" promptText="Ключ шифрування" />
+                              <TextArea fx:id="TextArea_Decrypt" editable="false" layoutX="29.0" layoutY="152.0" prefHeight="139.0" prefWidth="282.0" promptText="Тут буде відображатись ваш зашифрований текст" style="-fx-background-color: silver;" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
